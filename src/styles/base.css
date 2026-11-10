@@ -1,0 +1,103 @@
+:root {
+  --color-text: #202122;
+  --color-muted: #54595d;
+  --color-subtle: #72777d;
+  --color-border: #c8ccd1;
+  --color-border-strong: #a2a9b1;
+  --color-surface: #ffffff;
+  --color-surface-alt: #f8f9fa;
+  --color-surface-sunken: #eaecf0;
+  --color-link: #3366cc;
+  --color-link-visited: #6b4ba1;
+  --color-link-red: #d73333;
+  --color-accent: #3366cc;
+  --color-accent-hover: #2a4b8d;
+  --color-accent-soft: #eaf3ff;
+  --color-target: #14866d;
+  --color-target-soft: #d5fdf4;
+  --color-error: #bf3c2c;
+  --color-error-soft: #fee7e6;
+  --color-warning-soft: #fef6e7;
+  --radius: 8px;
+  --radius-small: 6px;
+  --shadow-header: 0 1px 0 rgba(0, 0, 0, 0.06), 0 2px 8px rgba(0, 0, 0, 0.04);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans Hebrew', Arial, sans-serif;
+  --font-serif: 'Linux Libertine', 'Georgia', 'Times', 'David', 'Frank Ruehl CLM', serif;
+  --header-height: 0px;
+  color-scheme: light;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  scroll-padding-top: calc(var(--header-height) + 12px);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text);
+  background: var(--color-surface);
+  -webkit-font-smoothing: antialiased;
+}
+
+button,
+input {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+.muted {
+  color: var(--color-muted);
+}
+
+.small {
+  font-size: 0.85rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
